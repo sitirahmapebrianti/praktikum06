@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Praktikum 6 - Basic JavaScript</title>
+</head>
+<body>
+
+    <h2>Praktikum Basic JavaScript</h2>
+    <p>Lihat hasil program melalui Console (F12).</p>
+
+    <script>
+        console.log("=== OUTPUT DAN VARIABEL ===");
+
+        const nama = "pebria";
+        const tanggalLahir = "01-02-2008";
+        let umur = 18;
+        let nilai = 90;
+        let aktif = true;
+        const prodi = "Teknik Informatika";
+
+        console.log("Nama:", nama);
+        console.log("Umur:", umur);
+        console.log("Tanggal Lahir:", tanggalLahir);
+        console.log("Nilai:", nilai);
+        console.log("Status aktif:", aktif);
+        console.log("Program Studi:", prodi);
+        console.log("Tipe nilai:", typeof nilai);
+
+
+        console.log("=== OPERATOR DAN PERHITUNGAN ===");
+
+        const tugas = 80;
+        const uts = 75;
+        const uas = 90;
+        const akhir = tugas * 0.30 + uts * 0.30 + uas * 0.40;
+
+        console.log("Nilai akhir:", akhir);
+        console.log("Lulus:", akhir >= 60);
+
+        // Contoh operator aritmetika
+        console.log("Penjumlahan:", 10 + 5);
+        console.log("Pengurangan:", 10 - 5);
+        console.log("Perkalian:", 10 * 5);
+        console.log("Pembagian:", 10 / 5);
+        console.log("Modulus:", 10 % 3);
+
+
+        console.log("=== PERCABANGAN ===");
+
+        const nilaiMahasiswa = 78;
+        let kategori;
+
+        if (nilaiMahasiswa >= 85) {
+            kategori = "A";
+        } else if (nilaiMahasiswa >= 70) {
+            kategori = "B";
+        } else if (nilaiMahasiswa >= 60) {
+            kategori = "C";
+        } else {
+            kategori = "D";
+        }
+
+        console.log("Nilai:", nilaiMahasiswa);
+        console.log("Kategori:", kategori);
+
+
+        console.log("=== PERULANGAN DAN FUNGSI ===");
+
+        function hitungDiskon(harga, persen) {
+            return harga - (harga * persen / 100);
+        }
+
+        for (let i = 1; i <= 3; i++) {
+            const harga = i * 10000;
+            const bayar = hitungDiskon(harga, 10);
+
+            console.log(
+                "Barang:", i,
+                "Harga:", harga,
+                "Bayar:", bayar
+            );
+        }
+
+
+        console.log("=== PENGOLAH NILAI MAHASISWA ===");
+
+        const namaMahasiswa = "pebria";
+        const nilaiTugas = 80;
+        const nilaiUTS = 70;
+        const nilaiUAS = 90;
+
+        const nilaiAkhir =
+            (nilaiTugas * 0.30) +
+            (nilaiUTS * 0.30) +
+            (nilaiUAS * 0.40);
+
+        let status;
+
+        if (nilaiAkhir >= 60) {
+            status = "LULUS";
+        } else {
+            status = "TIDAK LULUS";
+        }
+
+        console.log("Nama Mahasiswa:", namaMahasiswa);
+        console.log("Tanggal Lahir:", tanggalLahir);
+        console.log("Nilai Tugas:", nilaiTugas);
+        console.log("Nilai UTS:", nilaiUTS);
+        console.log("Nilai UAS:", nilaiUAS);
+        console.log("Nilai Akhir:", nilaiAkhir);
+        console.log("Status Kelulusan:", status);
+    </script>
+
+</body>
+</html>
